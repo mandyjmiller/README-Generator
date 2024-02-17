@@ -5,25 +5,20 @@ import inquirer from "inquirer";
 import { writeFile } from 'fs' 
 
 
+//Function to return license badges
+const getLicenseBadge = license => {
+  // Map license names to badge URLs
+  const badgeURLs = {
+    'Apache': 'https://img.shields.io/badge/License-Apache%202.0-blue.svg',
+    'BSD': 'https://img.shields.io/badge/License-BSD%203--Clause-blue.svg',
+    'Creative Commons': 'https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg',
+    'GNU GPL v3': 'https://img.shields.io/badge/License-GPL-blue.svg',
+    'MIT': 'https://img.shields.io/badge/License-MIT-yellow.svg',
+  };
+  return badgeURLs[license];
+};
 
-// Create a command-line application that accepts user input.
-// When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with:
-// The title of my project
-// Sections entitled:
-// Description
-// Table of Contents
-// Installation
-// Usage
-// License
-// Contributing
-// Tests
-// Questions
-// When a user enters the project title then it is displayed as the title of the README
-// When a user enters a description, installation instructions, usage information, contribution guidelines, and test instructions then this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-// When a user chooses a license for their application from a list of options then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-// When a user enters their GitHub username then this is added to the section of the README entitled Questions, with a link to their GitHub profile
-// When a user enters their email address then this is added to the section of the README entitled Questions, with instructions on how to reach them with additional questions
-// When a user clicks on the links in the Table of Contents then they are taken to the corresponding section of the README
+//WRITE A SIMILAT FUNCTION FOR TECHNOCLOGIES USED. JAVASCRIPT ETC...//
 
 
 // Prompts
@@ -57,9 +52,8 @@ inquirer.prompt([
     type: 'list', 
     name: 'license',
     message: 'License:',
-    choices: ['MIT', 'GPL', 'Apache', 'BSD', 'None'] 
-  },
-
+    choices: ['Apache', 'BSD', 'Creative Commons', 'GNU GPL v3', 'MIT'] 
+    },
   {
     type: 'input',
     name: 'contributing',
@@ -76,6 +70,9 @@ inquirer.prompt([
     message: 'Questions:'
   }
 ]).then(answers => {
+
+  // Generate license badge and notice
+  const licenseBadgeURL = getLicenseBadge(answers.license);
 
 
   // README Answers:
@@ -100,7 +97,9 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
+![License Badge](${licenseBadgeURL})
 ${answers.license}
+
 
 ## Contributing
 ${answers.contributing}
