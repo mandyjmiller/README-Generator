@@ -27,15 +27,10 @@ const getLicenseURL = license => {
     'BSD': 'https://choosealicense.com/licenses/bsd-2-clause-patent/',
     'Creative Commons': 'https://choosealicense.com/licenses/cc-by-4.0/',
     'GNU GPL v3': 'https://choosealicense.com/licenses/gpl-3.0/',
-    'MIT': 'https://www.https://choosealicense.com/licenses/mit/.com',
+    'MIT': 'https://choosealicense.com/licenses/mit/',
   };
   return licenseURLs[license];
 };
-
-
-
-//WRITE A SIMILAT FUNCTION FOR TECHNOCLOGIES USED. JAVASCRIPT ETC...//
-
 
 // Prompts
 inquirer.prompt([
@@ -127,9 +122,9 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
-![License Badge](${licenseBadgeURL})
-${answers.license}
-For more information please view the <a href = ${licenseURLs}> ${answers.license}</a> license description.
+<a href = ${licenseURLs}> ![License Badge](${licenseBadgeURL})</a> <br>
+Developed under the ${answers.license} license.<br><br>
+For more information please view the <a href = ${licenseURLs}> ${answers.license} license description </a> .
 
 
 ## Contributing
@@ -140,10 +135,12 @@ ${answers.tests}
 
 ## Questions
 
-For further infomation, please follow me on <a href ="${answers.github}">GitHub ${answers.github}</a>
+For further infomation, please follow me on GitHub: <a href ="${answers.github}">${answers.github}</a><br>
 or contact me via email at ${answers.email}
 
+THANK YOU!
 
+_____________________________________________________________________
 `;
 
   // Write README content to file

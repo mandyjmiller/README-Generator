@@ -1,11 +1,9 @@
 
-# 
-<a href = https://www.google.com> ![License Badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)</a> 
-<a href = "https://img.shields.io/npm/v/npm.svg?logo=nodedotjs"> ![License Badge](https://img.shields.io/npm/v/npm.svg?logo=javascript)</a> 
-<a href = https://www.google.com> ![License Badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)</a> 
+# gdsfg
+<a href = https://choosealicense.com/licenses/mit/> ![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)</a> 
 
 ## Description
-
+gfd
 
 
 ## Table of Contents
@@ -17,26 +15,28 @@
 - [Questions](#questions)
 
 ## Installation
-
+gfsgf
 
 ## Usage
-
+The application will be invoked by using the following command in the CLI
 
 ## License
-![License Badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-Apache
-For more information please view the <a href = https://www.google.com> Apache</a> license description.
+<a href = https://choosealicense.com/licenses/mit/> ![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)</a> <br>
+Developed under the MIT license.<br><br>
+For more information please view the <a href = https://choosealicense.com/licenses/mit/> MIT license description </a> .
 
 
 ## Contributing
-
+gfadgds
 
 ## Tests
-
+gfdsgds
 
 ## Questions
 
-For further infomation, please follow me on <a href ="mandfdsaf">GitHub mandfdsaf</a>
-or contact me via email at fsdfsd
+For further infomation, please follow me on GitHub: <a href ="gfdsgd">gfdsgd</a><br>
+or contact me via email at gfdsg
 
+THANK YOU!
 
+_____________________________________________________________________
