@@ -1,6 +1,6 @@
 
 # README Generator
-<a href = https://choosealicense.com/licenses/mit/> ![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)</a> 
+<a href = https://choosealicense.com/licenses/mit/> ![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)</a> <br>
 
 ## Description
 As a developer, I want an application which can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project and ensures a professional output.
@@ -19,6 +19,9 @@ Uses node.js and the [Inquirer package](https://www.npmjs.com/package/inquirer).
 
 ## Usage
 Instructions for use:  The application will be invoked by using the following command in the CLI  ```bash  node index.js  ```  This will call the the inquirer package to prompt questions which will populate the README file
+
+This video link will demonstrate a walkthrough of the application:
+<a href = 'https://drive.google.com/file/d/185zTHgKL1Y3cBbUL8oOUupMlCTyGPN3D/view?usp=sharing'> ![screenshot](assets/images/screenshot.png)</a>
 
 ## License
 <a href = https://choosealicense.com/licenses/mit/> ![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)</a> <br>

@@ -1,6 +1,3 @@
-// const fs = require('fs');
-// const inquirer = require('inquirer');
-
 import inquirer from "inquirer";
 import { writeFile } from 'fs' 
 
@@ -19,7 +16,7 @@ const getLicenseBadge = license => {
 };
 
 
-//Function to return license badges
+//Function to return license URL
 const getLicenseURL = license => {
   // Map license names to badge URLs
   const licenseURLs = {
@@ -44,12 +41,7 @@ inquirer.prompt([
     name: 'description',
     message: 'Description:'
   },
-  //DON'T NEED TOC - IT'S AUTOMATICALLY GENERATED
-  // {
-  //   type: 'input',
-  //   name: 'contents',
-  //   message: 'Table of Contents:'
-  // },
+
   {
     type: 'input',
     name: 'installation',
@@ -101,7 +93,7 @@ inquirer.prompt([
   // README Answers:
   const READMEContent = `
 # ${answers.title}
-<a href = ${licenseURLs}> ![License Badge](${licenseBadgeURL})</a> 
+<a href = ${licenseURLs}> ![License Badge](${licenseBadgeURL})</a> <br>
 
 ## Description
 ${answers.description}
@@ -120,6 +112,11 @@ ${answers.installation}
 
 ## Usage
 ${answers.usage}
+
+This video link will demonstrate a walkthrough of the application:
+
+<a href = 'https://drive.google.com/file/d/185zTHgKL1Y3cBbUL8oOUupMlCTyGPN3D/view?usp=sharing'> ![screenshot](assets/images/screenshot.png)</a>
+
 
 ## License
 <a href = ${licenseURLs}> ![License Badge](${licenseBadgeURL})</a> <br>
