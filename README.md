@@ -1,8 +1,12 @@
 
-# gfgsdfg
+# 
+<a href = https://www.google.com> ![License Badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)</a> 
+<a href = "https://img.shields.io/npm/v/npm.svg?logo=nodedotjs"> ![License Badge](https://img.shields.io/npm/v/npm.svg?logo=javascript)</a> 
+<a href = https://www.google.com> ![License Badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)</a> 
 
 ## Description
-gfdgfgsdfg
+
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -13,21 +17,26 @@ gfdgfgsdfg
 - [Questions](#questions)
 
 ## Installation
-gfdsgfdsgfd
+
 
 ## Usage
-gfsgsdgsdf
+
 
 ## License
-![License Badge](https://img.shields.io/badge/License-GPL-blue.svg)
-GNU GPL v3
+![License Badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+Apache
+For more information please view the <a href = https://www.google.com> Apache</a> license description.
 
 
 ## Contributing
-hfghdghdg
+
 
 ## Tests
-hghdghdhgd
+
 
 ## Questions
-hgdhgdhgd
+
+For further infomation, please follow me on <a href ="mandfdsaf">GitHub mandfdsaf</a>
+or contact me via email at fsdfsd
+
+

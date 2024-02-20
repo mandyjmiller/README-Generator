@@ -18,6 +18,22 @@ const getLicenseBadge = license => {
   return badgeURLs[license];
 };
 
+
+//Function to return license badges
+const getLicenseURL = license => {
+  // Map license names to badge URLs
+  const licenseURLs = {
+    'Apache': 'https://choosealicense.com/licenses/apache-2.0/',
+    'BSD': 'https://choosealicense.com/licenses/bsd-2-clause-patent/',
+    'Creative Commons': 'https://choosealicense.com/licenses/cc-by-4.0/',
+    'GNU GPL v3': 'https://choosealicense.com/licenses/gpl-3.0/',
+    'MIT': 'https://www.https://choosealicense.com/licenses/mit/.com',
+  };
+  return licenseURLs[license];
+};
+
+
+
 //WRITE A SIMILAT FUNCTION FOR TECHNOCLOGIES USED. JAVASCRIPT ETC...//
 
 
@@ -26,18 +42,19 @@ inquirer.prompt([
   {
     type: 'input',
     name: 'title',
-    message: 'The title of my project:'
+    message: 'Project Title:'
   },
   {
     type: 'input',
     name: 'description',
     message: 'Description:'
   },
-  {
-    type: 'input',
-    name: 'contents',
-    message: 'Table of Contents:'
-  },
+  //DON'T NEED TOC - IT'S AUTOMATICALLY GENERATED
+  // {
+  //   type: 'input',
+  //   name: 'contents',
+  //   message: 'Table of Contents:'
+  // },
   {
     type: 'input',
     name: 'installation',
@@ -66,21 +83,34 @@ inquirer.prompt([
   },
   {
     type: 'input',
-    name: 'questions',
-    message: 'Questions:'
+    name: 'github',
+    message: 'Please enter your GitHub user name:'
+  },
+
+  {
+    type: 'input',
+    name: 'email',
+    message: 'Please enter your email address:'
   }
+
+
 ]).then(answers => {
 
-  // Generate license badge and notice
+  // Generate license badge
   const licenseBadgeURL = getLicenseBadge(answers.license);
+
+  // Generate license URL
+  const licenseURLs = getLicenseURL(answers.license);
 
 
   // README Answers:
   const READMEContent = `
 # ${answers.title}
+<a href = ${licenseURLs}> ![License Badge](${licenseBadgeURL})</a> 
 
 ## Description
 ${answers.description}
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -99,6 +129,7 @@ ${answers.usage}
 ## License
 ![License Badge](${licenseBadgeURL})
 ${answers.license}
+For more information please view the <a href = ${licenseURLs}> ${answers.license}</a> license description.
 
 
 ## Contributing
@@ -108,10 +139,14 @@ ${answers.contributing}
 ${answers.tests}
 
 ## Questions
-${answers.questions}
+
+For further infomation, please follow me on <a href ="${answers.github}">GitHub ${answers.github}</a>
+or contact me via email at ${answers.email}
+
+
 `;
 
-  // Write Markdown content to file
+  // Write README content to file
   writeFile('README.md', READMEContent, err => {
     if (err) {
       console.error('Uh-oh. Something went wrong:', err);
